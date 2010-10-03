@@ -1,0 +1,57 @@
+
+    *** cpuinfo program ***
+
+
+Table of contents
+=================
+
+ o Introduction
+ o Requirements
+ o Installation
+ o Known Problems
+
+
+Introduction
+============
+
+cpuinfo prints information about the CPU of the host
+it is running on. On x86_64 it uses the cpuid instruction
+to gather information. There is no real support for
+ppc_64 (e.g., the Cell PPE) currently.
+
+
+Requirements
+============
+
+A C99 compatible compiler is necessary for compilation.
+The code compiles on Linux and Mac Os X.
+
+
+Installation
+============
+
+This guide assumes that you start out in the cpuinfo directory
+and that the bin directory of cmake is in your $PATH.
+To install cpuinfo, you should create a new directory for
+building
+
+% mkdir build
+% cd build
+
+You can simply type
+
+% cmake -DCMAKE_INSTALL_PREFIX=<PREFIX> ..
+
+where <PREFIX> is the directory where you want to install
+the headers and library file.
+To build and install cpuinfo you can type
+
+% make
+% make install
+
+
+Known Problems
+==============
+
+No known bugs so far.
+
